@@ -41,37 +41,34 @@ cars = [{
     "Price": 31000
 }]
 
-jsonData = json.dumps(cars)
+# jsonData = json.dumps({"cars": cars})
 with open("cars.json", "wt") as file:
-    file.write(jsonData)
-
-file.close()
+    json.dump({"cars": cars}, file)
 
 while True:    
     print("Select an option:\n 1 - Add data\n 2 - View data\n 3 - Find average price of 6+ years old cars\n 4 - Exit") 
     x = input("Choose an option:\n") 
     x = int(x)
     if x == 1:
-        with open("cars.json", "at") as file:
-            cars = json.loads(jsonData)
-            def add_car(data):
+        with open("cars.json", "rt") as file:
+            cars = json.load(file)["cars"]
+        with open("cars.json", "wt") as file:
+            def add_car(dictData):
                 print("Add: ")
                 Model = input("Model:")
                 Age = input("Age:")
                 Price = input("Price:")
-                dictData.append({"Model": Model, "Age": Age, "Price": Price})
-                return data
+                dictData.append({"Model": Model, "Age": int(Age), "Price": int(Price)})
+                return dictData
             cars = add_car(cars)
-            jsonData = json.dumps(cars)
-            file.write(cars)
-            file.close
+            json.dump({"cars": cars}, file)
     if x == 2:
         with open("cars.json", "rt") as file:
-            cars = json.loads(jsonData)
+            cars = json.load(file)["cars"]
             print(*cars, sep='\n')
     if x == 3:
         with open("cars.json", "rt") as file:
-            cars = json.load(file)
+            cars = json.load(file)["cars"]
             total_price = 0
             count = 0
             for car in cars:
@@ -81,6 +78,8 @@ while True:
             if count > 0:
                 average_price = total_price / count
                 print(f"Середня вартість автомобілів старше 6 років: {average_price:.2f}")
+                with open("avg.json", "wt") as file:
+                    json.dump({"average_price": average_price}, file)
             else:
                 print("Немає автомобілів старше 6 років.")
     if x == 4:
