@@ -1,1 +1,59 @@
-{"cars": [{"Model": "Honda", "Age": 5, "Price": 29000}, {"Model": "Hyundai", "Age": 7, "Price": 38000}, {"Model": "Toyota", "Age": 3, "Price": 36000}, {"Model": "BMW", "Age": 2, "Price": 26000}, {"Model": "Mercedes", "Age": 6, "Price": 45000}, {"Model": "Volkswagen", "Age": 10, "Price": 43000}, {"Model": "Chevrolet", "Age": 12, "Price": 56000}, {"Model": "Renault", "Age": 4, "Price": 39000}, {"Model": "Ford", "Age": 8, "Price": 42000}, {"Model": "Opel", "Age": 7, "Price": 31000}]}
+{
+    "cars": [
+        {
+            "model": "Model 1",
+            "price": 43182,
+            "age": 8
+        },
+        {
+            "model": "Model 2",
+            "price": 4023,
+            "age": 18
+        },
+        {
+            "model": "Model 3",
+            "price": 44452,
+            "age": 14
+        },
+        {
+            "model": "Model 4",
+            "price": 11260,
+            "age": 14
+        },
+        {
+            "model": "Model 5",
+            "price": 25650,
+            "age": 1
+        },
+        {
+            "model": "Model 6",
+            "price": 19520,
+            "age": 22
+        },
+        {
+            "model": "Model 7",
+            "price": 49807,
+            "age": 15
+        },
+        {
+            "model": "Model 8",
+            "price": 34137,
+            "age": 21
+        },
+        {
+            "model": "Model 9",
+            "price": 24515,
+            "age": 6
+        },
+        {
+            "model": "Model 10",
+            "price": 4522,
+            "age": 15
+        },
+        {
+            "model": "Opel",
+            "price": 6000,
+            "age": 5
+        }
+    ]
+}
